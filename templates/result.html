@@ -1,0 +1,17 @@
+<html>
+
+<body>
+<h1> Task State </h1> 
+<table>
+<tr> <td> Task </td> <td> {{result.id}}  </td> </tr>
+<tr> <td> Ready </td> <td>  
+    {{result.ready() }} 
+    {% if result.ready() == False %}
+    <a href="/result/{{result.id}}"> refresh </a>    
+    {% endif %}</td> </tr>
+<tr> <td> Status </td> <td>  {{result.status }} </td> </tr>
+<tr> <td> Current result </td> <td>  {{ result.result }} </td> </tr>
+</table>
+
+</body>    
+</html>
